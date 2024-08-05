@@ -8,6 +8,34 @@
 
   <div class="row mb-3">
     <div class="col-md-6">
+      <%= form.label :description, class: 'form-label' %>
+      <%= form.text_area :description, class: 'form-control' %>
+    </div>
+  </div>
+
+   <div class="row mb-3">
+    <div class="col-md-6">
+      <%= form.label :current_stock, class: 'form-label' %>
+      <%= form.number_field :current_stock, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <%= form.label :price, class: 'form-label' %>
+      <%= form.number_field :price, class: 'form-control' %>
+    </div>
+  </div>
+
+   <div class="row mb-3">
+    <div class="col-md-6">
+      <%= form.label :discount, class: 'form-label' %>
+      <%= form.number_field :discount, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-6">
       <%= form.label :image, class: 'form-label' %>
       <%= form.file_field :image, class: 'form-control' %>
     </div>
