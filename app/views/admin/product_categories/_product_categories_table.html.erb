@@ -1,0 +1,27 @@
+<div class="d-flex justify-content-center">
+  <table class="table table-hover text-nowrap w-75">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Category</th>
+        <th scope="col">No. of Products</th>
+        <th scope="col" class="text-center" style="width: 150px;">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @product_categories.each_with_index do |category, index| %>
+        <tr>
+          <td><%= index + 1 %></td>
+          <td>
+            <%= link_to category.name , admin_product_category_path(category), class: 'text-decoration-none' %>
+          </td>
+          <td><%= category.products.count %></td>
+          <td class='d-flex justify-content-center gap-2'>
+            <%= link_to "Edit", edit_admin_product_category_path(category), class: "btn btn-outline-primary btn-sm" %>
+            <%= button_to "Delete", admin_product_category_path(category), method: :delete, class: "btn btn-outline-primary btn-sm", data: { confirm: "Are you sure?" } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

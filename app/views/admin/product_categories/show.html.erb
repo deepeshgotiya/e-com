@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-around p-5">
+  <p> Product name :
+   <span>
+    <%= @product_category.name %>
+   </span>
+  </p>
+  <p> Product Count :
+    <span>
+      <%= @product_category.products.count %>
+    </span> 
+  </p>
+  <%= button_to "Add Products",
+    new_admin_product_category_product_path(product_category_id: @product_category.id),
+    class: "btn btn-primary",
+    method: :get  
+  %>
+</div>
+
+<div>
+  <%= render 'admin/products/product_lists', products: @product_category.products %>
+</div>

@@ -1,0 +1,15 @@
+ <%= form_with(model: [:admin, @product_category], local: true) do |form| %>
+  <legend>Product Category Form</legend>
+
+  <div class="mb-3">
+    <%= form.label :name, class: "form-label" %>
+    <%= form.text_field :name, id: "disabledTextInput", class: "form-control", placeholder: "Enter category name" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :products_count, class: "form-label" %>
+    <%= form.number_field :products_count, id: "disabledSelect", class: "form-control", placeholder: "Enter product count" %>
+  </div>
+
+  <%= form.submit "Submit", class: "btn btn-primary" %>
+<% end %>

@@ -1,0 +1,21 @@
+<%= form_with(model: [:admin, :product_category, @product], local: true, html: { class: 'container mt-4' }) do |form| %>
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <%= form.label :name, class: 'form-label' %>
+      <%= form.text_field :name, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <%= form.label :image, class: 'form-label' %>
+      <%= form.file_field :image, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <%= form.submit 'Save', class: 'btn btn-primary' %>
+    </div>
+  </div>
+<% end %>

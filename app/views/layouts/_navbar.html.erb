@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+  <div class="container-fluid">
+    <%= button_tag class: 'navbar-toggler', type: 'button', data: { mdb_collapse_init: true, mdb_target: '#navbarSupportedContent' }, aria: { controls: 'navbarSupportedContent', expanded: 'false', label: 'Toggle navigation' } do %>
+      <i class="fas fa-bars"></i>
+    <% end %>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <p>Logo</p>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%= link_to 'Dashboard', '#', class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Team', '#', class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Projects', '#', class: 'nav-link' %>
+        </li>
+      </ul>
+    </div>
+    <div class="d-flex align-items-center">
+      <%= link_to '#', class: 'text-reset me-3' do %>
+        <i class="fas fa-shopping-cart"></i>
+      <% end %>
+      <div class="dropdown">
+        <%= link_to '#', id: 'navbarDropdownMenuLink', role: 'button', aria: { expanded: 'false' }, class: 'text-reset me-3 dropdown-toggle hidden-arrow', data: { mdb_dropdown_init: true } do %>
+          <i class="fas fa-bell"></i>
+          <span class="badge rounded-pill badge-notification bg-danger">1</span>
+        <% end %>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+          <li><%= link_to 'Some news', '#', class: 'dropdown-item' %></li>
+          <li><%= link_to 'Another news', '#', class: 'dropdown-item' %></li>
+          <li><%= link_to 'Something else here', '#', class: 'dropdown-item' %></li>
+        </ul>
+      </div>
+      <div class="dropdown">
+        <%= link_to '#', id: 'navbarDropdownMenuAvatar', role: 'button', aria: { expanded: 'false' }, class: 'dropdown-toggle d-flex align-items-center hidden-arrow', data: { mdb_dropdown_init: true } do %>
+          <%= image_tag('https://mdbcdn.b-cdn.net/img/new/avatars/2.webp', class: 'rounded-circle', height: 25, alt: 'Black and White Portrait of a Man', loading: 'lazy') %>
+        <% end %>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+          <li><%= link_to 'My profile', '#', class: 'dropdown-item' %></li>
+          <li><%= link_to 'Settings', '#', class: 'dropdown-item' %></li>
+          <li><%= link_to 'Logout', '#', class: 'dropdown-item' %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+

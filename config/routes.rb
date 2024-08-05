@@ -4,7 +4,13 @@ Rails.application.routes.draw do
  
   get "up" => "rails/health#show", as: :rails_health_check
 
-  devise_scope :user do
+  devise_scope :admin do
     root to: "devise/sessions#new"
+  end
+
+  namespace :admin do
+    resources :product_categories do
+      resources :products
+    end
   end
 end
