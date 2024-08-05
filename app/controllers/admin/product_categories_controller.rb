@@ -47,7 +47,7 @@ class Admin::ProductCategoriesController < ApplicationController
   private
   
   def permitted_params
-    params.require(:product_category).permit(:name, :products_count)
+    params.require(:product_category).permit(:name, :description)
   end
 
   def intialize_product_category

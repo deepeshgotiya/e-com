@@ -14,7 +14,7 @@ class Admin::ProductsController < ApplicationController
       flash[:notice] = "Category Successfully created!"
       redirect_to admin_product_category_path(@product_category)
     else
-      flash[:notice] = @product.erros.full_messages
+      flash[:notice] = @product.errors.full_messages
     end
   end
 
@@ -44,7 +44,7 @@ class Admin::ProductsController < ApplicationController
   private
   
   def permitted_params
-    params.require(:product).permit(:name, :image)
+    params.require(:product).permit(:name, :image, :description, :current_stock, :price, :discount)
   end
 
   def intialize_product
